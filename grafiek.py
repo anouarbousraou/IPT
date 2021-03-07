@@ -1,11 +1,12 @@
 import matplotlib.pyplot as plt
 import csv
+import matplotlib.patches as mpatches
 
 
 y = []
 x = []
 
-with open ("Book5.csv", "r") as data:
+with open ("export_ipt.csv", "r") as data:
 
     reader = csv.DictReader(data)
 
@@ -15,9 +16,10 @@ with open ("Book5.csv", "r") as data:
 
 
 ax = plt.subplot()
-ax.set_title("Opportunity Set")
-ret_plt = ax.scatter(x, y)
-plt.plot(x,y)
+legenda = mpatches.Patch(color='g', label='Portfolio consists of weight in Gold and China')
+plt.legend(handles=[legenda])
+ret_plt = ax.scatter(x, y, color='g')
+plt.plot(x,y,color='k')
 plt.xlabel("Standard Deviation in %")
 plt.ylabel("Return in %")
 
