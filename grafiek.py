@@ -16,13 +16,13 @@ with open ("export_ipt.csv", "r") as data:
         x.append(float(row.get("x")))
         y.append(float(row.get("y")))
 
-with plt.style.context('dark_background'):
+with plt.style.context('seaborn-darkgrid'):
     ax = plt.subplot()
-    legenda = mpatches.Patch(color='khaki', label='Portfolio of Gold fund & ETF on the MSCI ChinaIndex')
+    legenda = mpatches.Patch(color='b', label='Portfolio of Gold fund & ETF on the MSCI ChinaIndex')
     plt.legend(handles=[legenda])
-    ret_plt = ax.scatter(x, y, color='khaki')
+    ret_plt = ax.scatter(x, y, color='b')
 
-    plt.plot(x,y,color='y')
+    plt.plot(x,y,color='k')
   
     plt.xlabel("Standard Deviation in %")
     plt.ylabel("Return in %")
