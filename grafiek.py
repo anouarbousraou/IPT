@@ -23,6 +23,8 @@ with plt.style.context('seaborn-darkgrid'):
     ret_plt = ax.scatter(x, y, color='b')
 
     plt.plot(x,y,color='k')
+    ax.set_ylim(ymin=0, ymax=15)
+    ax.set_xlim(xmin=0, xmax=25)
   
     plt.xlabel("Standard Deviation in %")
     plt.ylabel("Return in %")
