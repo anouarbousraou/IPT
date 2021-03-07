@@ -16,10 +16,10 @@ with open ("export_ipt.csv", "r") as data:
 
 
 ax = plt.subplot()
-legenda = mpatches.Patch(color='g', label='Portfolio consists of weight in Gold and China')
+legenda = mpatches.Patch(color='r', label='Portfolio of Gold fund & ETF on the MSCI ChinaIndex')
 plt.legend(handles=[legenda])
-ret_plt = ax.scatter(x, y, color='g')
-plt.plot(x,y,color='k')
+ret_plt = ax.scatter(x, y, color='r')
+plt.plot(x,y,color='b')
 plt.xlabel("Standard Deviation in %")
 plt.ylabel("Return in %")
 
